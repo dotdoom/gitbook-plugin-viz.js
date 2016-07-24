@@ -1,40 +1,46 @@
-GitBook Sample Plugin
-==============
+# GitBook Viz.js plugin
 
-This is a model for GitBook plugins.
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url]
 
-## How GitBook plugin works?
+[Viz.js](https://github.com/mdaines/viz.js) plugin for gitbook.
 
-A plugin for GitBook is a node package that can be published on [NPM](http://www.npmjs.org). It has to follow the name convention: `gitbook-plugin-*name*`.
-
-### package.json
-
-#### name
-
-The package name should begin with ```gitbook-plugin-```.
-
-Examples: `gitbook-plugin-mixpanel`, `gitbook-plugin-googleanalytics`.
-
-#### engine
-
-The package.json should contain a `engine` field using [the standard norm](https://www.npmjs.org/doc/json.html#engines).
+Example usage:
 
 ```
-"engines": {
-    "gitbook": "*"
+{% graphviz %}
+# http://www.graphviz.org/content/cluster
+
+digraph G {
+
+	subgraph cluster_0 {
+		style=filled;
+		color=lightgrey;
+		node [style=filled,color=white];
+		a0 -> a1 -> a2 -> a3;
+		label = "process #1";
+	}
+
+	subgraph cluster_1 {
+		node [style=filled];
+		b0 -> b1 -> b2 -> b3 -> b0 -> b0;
+		label = "process #2";
+		color=blue
+	}
+	start -> a0;
+	start -> b0;
+	a1 -> b3;
+	b2 -> a3;
+	a3 -> a0;
+	a3 -> end;
+	b3 -> end;
+
+	start [shape=Mdiamond];
+	end [shape=Msquare];
 }
+
+{% endgraphviz %}
 ```
 
-For example if you want your plugin to supports only GitBook version supperior to 0.3.1:
-
-```
-"engines": {
-    "gitbook": ">=0.3.1"
-}
-```
-
-### entry point
-
-The plugin entry point should return an object with some metadata.
-
-
+[npm-url]: https://npmjs.org/package/gitbook-plugin-viz.js
+[downloads-image]: http://img.shields.io/npm/dm/gitbook-plugin-viz.js.svg
+[npm-image]: http://img.shields.io/npm/v/gitbook-plugin-viz.js.svg

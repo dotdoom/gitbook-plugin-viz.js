@@ -1,18 +1,21 @@
 {
-    "name": "gitbook-plugin",
-    "description": "Sample plugin for GitBook",
+    "name": "gitbook-plugin-viz.js",
+    "description": "Viz.js plugin for GitBook",
     "main": "index.js",
-    "version": "0.0.2",
+    "version": "0.0.5",
     "engines": {
         "gitbook": "*"
     },
-    "homepage": "https://github.com/GitbookIO/plugin",
+    "homepage": "https://github.com/dotdoom/gitbook-plugin-viz.js",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GitbookIO/plugin.git"
+        "url": "https://github.com/dotdoom/gitbook-plugin-viz.js.git"
     },
-    "license": "Apache 2",
+    "license": "BSD",
     "bugs": {
-        "url": "https://github.com/GitbookIO/plugin/issues"
+        "url": "https://github.com/dotdoom/gitbook-plugin-viz.js/issues"
+    },
+    "dependencies": {
+        "viz.js": ">=1.3.0"
     }
 }
