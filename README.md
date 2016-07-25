@@ -7,7 +7,7 @@
 Example usage:
 
 ```
-{% graphviz %}
+{% graphviz engine="dot" %}
 # http://www.graphviz.org/content/cluster
 
 digraph G {
@@ -37,7 +37,6 @@ digraph G {
 	start [shape=Mdiamond];
 	end [shape=Msquare];
 }
-
 {% endgraphviz %}
 ```
 

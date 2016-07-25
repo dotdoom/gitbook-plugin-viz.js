@@ -5,7 +5,7 @@ module.exports = {
         graphviz: {
             process: function(block) {
                 return Viz(block.body, {
-                    engine: "dot",
+                    engine: block.kwargs.engine || "dot",
                     format: "svg"
                 });
             }

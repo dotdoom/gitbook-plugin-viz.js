@@ -2,7 +2,7 @@
     "name": "gitbook-plugin-viz.js",
     "description": "Viz.js plugin for GitBook",
     "main": "index.js",
-    "version": "0.0.5",
+    "version": "0.1.0",
     "engines": {
         "gitbook": "*"
     },
